@@ -59,7 +59,7 @@ To collect and analyze the above-mentioned information, we use Firebase services
 - **Firebase Analytics:** Helps us collect anonymized usage statistics for the App.
 - **Firebase Crashlytics:** Helps us track, prioritize, and fix stability issues in the App.
 
-These services assist us in understanding how our App is used and improving it. Google processes this data on our behalf. Google’s privacy policy is available at: [https://policies.google.com/privacy](https://policies.google.com/privacy)
+These services assist us in understanding how our App is used and improving it. Google processes this data on our behalf. Google's privacy policy is available at: [https://policies.google.com/privacy](https://policies.google.com/privacy)
 
 ---
 
@@ -96,7 +96,7 @@ In accordance with applicable data protection laws, you may have the following r
 - **Right to Restriction:** Request restriction of data processing.
 - **Right to Object:** Object to processing based on our legitimate interests.
 
-To exercise your rights, please contact us at [your contact email]. We will respond to your request in accordance with applicable law.
+To exercise your rights, please contact us at <maratsafutdinov@gmail.com>. We will respond to your request in accordance with applicable law.
 
 ---
 
@@ -114,4 +114,4 @@ We may update this Policy from time to time. We will notify you of significant c
 
 ## 11. Contact
 
-If you have any questions, comments, or requests regarding this Policy or the processing of your data, please contact us at: maratsafutdinov@gmail.com
+If you have any questions, comments, or requests regarding this Policy or the processing of your data, please contact us at: <maratsafutdinov@gmail.com>
