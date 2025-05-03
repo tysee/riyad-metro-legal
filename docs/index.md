@@ -7,10 +7,6 @@ Please select your preferred language to view the privacy policy and terms of us
 
 ## About the Riyadh Metro App
 
-<div class="logo-container">
-  <img src="./images/logo-transparent.png" alt="Riyadh Metro Logo" class="logo">
-</div>
-
 The Riyadh Metro app is your essential companion for navigating the Riyadh public transportation system. Our app provides a seamless user experience with the following features:
 
 ### 🗺️ Metro Map Viewer
