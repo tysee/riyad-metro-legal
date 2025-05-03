@@ -83,28 +83,37 @@ div.ltr ol {
   padding-right: 0;
 }
 
-/* Custom RTL adjustments */
+/* Custom RTL adjustments using Flexbox */
 body[dir="rtl"] .wrapper {
-  /* Helps contain the floated header */
-  overflow: hidden; 
+  display: flex;
+  flex-direction: row-reverse; /* Header on right, Section on left */
+  flex-wrap: wrap; /* Allow footer to wrap */
 }
 
 body[dir="rtl"] header {
-  float: right;
-  margin-left: 0; /* Reset LTR margin */
-  margin-right: 10px; /* Add some space to the right edge */
+  /* Reset float properties from previous attempt */
+  float: none; 
+  width: 260px; /* Set fixed width for the header */
+  flex-shrink: 0; /* Prevent header from shrinking */
+  margin-left: 10px; /* Space between header and page edge */
+  margin-right: 0; /* Reset default/LTR margin */
 }
 
 body[dir="rtl"] section {
-  float: right; /* Float section as well */
-  margin-left: 0; /* Reset LTR margin */
-  margin-right: 270px; /* Keep the right margin to avoid overlap */
-  width: calc(100% - 280px); /* Explicitly set width (adjust 280px if needed) */
+  /* Reset float properties from previous attempt */
+  float: none; 
+  flex-grow: 1; /* Allow section to take remaining space */
+  /* Reset width/margins from previous float attempt */
+  width: auto; 
+  margin-right: 10px; /* Space between section and header */
+  margin-left: 0;
 }
 
-/* Ensure footer clears the floated elements in RTL */
 body[dir="rtl"] footer {
-    clear: right; /* Changed from clear: both or potentially no clear */
+  /* Reset clear properties from previous attempt */
+  clear: none; 
+  width: 100%; /* Ensure footer spans full width below flex items */
+  order: 3; /* Explicitly place footer after header and section */
 }
 
 /* You might need further adjustments for specific elements */
