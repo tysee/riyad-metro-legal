@@ -9,27 +9,34 @@
 /* Styles for app screenshot images */
 .app-screenshot {
   display: block; 
-  max-width: 100%; 
   height: auto; 
-  max-width: 300px; /* Max physical width */
+  max-width: 250px !important; /* Принудительно ограничиваем максимальную ширину */
+  width: 100% !important; /* Заполняем доступное пространство */
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
+  object-fit: contain; /* Сохраняем пропорции изображения */
 }
 
 /* Медиа-запросы для адаптивных изображений */
 @media (max-width: 768px) {
   .app-screenshot {
-    max-width: 250px;
+    max-width: 200px !important;
   }
 }
 
 @media (max-width: 480px) {
   .app-screenshot {
-    max-width: 200px;
+    max-width: 150px !important;
   }
+}
+
+/* Общие стили для всех изображений на странице, кроме логотипа */
+section img:not(.app-screenshot) {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Styles for Arabic RTL content */
@@ -86,16 +93,39 @@ div.ltr ol {
 
 /* --- RTL Adjustments for position:fixed header --- */
 
-body[dir="rtl"] header {
-  /* Override theme LTR positioning */
+body[dir="rtl"] .wrapper header {
+  float: right;
   left: auto !important;
   right: 0 !important;
+  position: fixed;
 }
 
-body[dir="rtl"] section,
-body[dir="rtl"] footer {
-  /* Override theme LTR margin */
-  margin-left: initial !important; /* Or margin-left: 10px; if theme has padding */
-  /* Apply margin to the right side */
-  margin-right: 300px !important; /* sidebar-width (260px) + gutter (40px) */
+body[dir="rtl"] .wrapper section {
+  float: left;
+  margin-left: 0 !important;
+  margin-right: 300px !important;
+  width: 500px;
+}
+
+body[dir="rtl"] .wrapper footer {
+  float: left;
+  margin-left: 0 !important;
+  margin-right: 300px !important;
+  width: 500px;
+}
+
+/* --- RTL responsive adjustments --- */
+@media print, screen and (max-width: 960px) {
+  body[dir="rtl"] .wrapper header {
+    float: none;
+    position: static;
+    width: auto;
+  }
+  
+  body[dir="rtl"] .wrapper section, 
+  body[dir="rtl"] .wrapper footer {
+    float: none;
+    margin-right: 0 !important;
+    width: auto;
+  }
 }
