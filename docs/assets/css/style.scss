@@ -31,53 +31,53 @@
 }
 
 /* Styles for Arabic RTL content */
-body.rtl {
+div.rtl {
   direction: rtl;
   text-align: right;
   font-family: 'Arial', sans-serif;
 }
 
-body.rtl h1, 
-body.rtl h2, 
-body.rtl h3, 
-body.rtl h4, 
-body.rtl h5, 
-body.rtl h6,
-body.rtl p,
-body.rtl ul,
-body.rtl ol {
+div.rtl h1, 
+div.rtl h2, 
+div.rtl h3, 
+div.rtl h4, 
+div.rtl h5, 
+div.rtl h6,
+div.rtl p,
+div.rtl ul,
+div.rtl ol {
   direction: rtl;
   text-align: right;
 }
 
-body.rtl ul, 
-body.rtl ol {
+div.rtl ul, 
+div.rtl ol {
   padding-right: 20px;
   padding-left: 0;
 }
 
 /* Styles for English LTR content */
-body.ltr {
+div.ltr {
   direction: ltr;
   text-align: left;
   font-family: 'Arial', sans-serif;
 }
 
-body.ltr h1, 
-body.ltr h2, 
-body.ltr h3, 
-body.ltr h4, 
-body.ltr h5, 
-body.ltr h6,
-body.ltr p,
-body.ltr ul,
-body.ltr ol {
+div.ltr h1, 
+div.ltr h2, 
+div.ltr h3, 
+div.ltr h4, 
+div.ltr h5, 
+div.ltr h6,
+div.ltr p,
+div.ltr ul,
+div.ltr ol {
   direction: ltr;
   text-align: left;
 }
 
-body.ltr ul, 
-body.ltr ol {
+div.ltr ul, 
+div.ltr ol {
   padding-left: 20px;
   padding-right: 0;
 }

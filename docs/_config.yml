@@ -5,18 +5,3 @@ show_downloads: false
 github:
   is_project_page: false
 theme: jekyll-theme-minimal 
-defaults:
-  -
-    scope:
-      path: "ar" # Will only match documents in ar/ folder
-    values:
-      lang: "ar"
-      dir: "rtl"
-      class: "rtl"
-  -
-    scope:
-      path: "en" # Will only match documents in en/ folder
-    values:
-      lang: "en"
-      dir: "ltr" 
-      class: "ltr" 
