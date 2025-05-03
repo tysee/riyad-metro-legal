@@ -84,41 +84,18 @@ div.ltr ol {
   padding-right: 0;
 }
 
-/* --- RTL Adjustments using Flexbox with higher specificity --- */
+/* --- RTL Adjustments for position:fixed header --- */
 
-/* Reset potential theme floats/margins first */
-body[dir="rtl"] header,
-body[dir="rtl"] section {
-  float: none !important; /* Ensure float is overridden */
-  margin-left: initial !important; /* Reset theme's LTR margin */
-  margin-right: initial !important; 
-  width: auto !important; /* Reset theme's width */
-  position: static !important; /* Reset potential positioning */
+body[dir="rtl"] header {
+  /* Override theme LTR positioning */
+  left: auto !important;
+  right: 0 !important;
 }
 
-body[dir="rtl"] div.wrapper { /* Increased specificity */
-  display: flex;
-  flex-direction: row-reverse; 
-  flex-wrap: wrap; 
+body[dir="rtl"] section,
+body[dir="rtl"] footer {
+  /* Override theme LTR margin */
+  margin-left: initial !important; /* Or margin-left: 10px; if theme has padding */
+  /* Apply margin to the right side */
+  margin-right: 300px !important; /* sidebar-width (260px) + gutter (40px) */
 }
-
-body[dir="rtl"] header { /* Increased specificity */
-  width: 260px; 
-  flex-shrink: 0; 
-  margin-left: 10px; /* Space between header and page edge (now on the right) */
-  margin-right: 0;
-}
-
-body[dir="rtl"] section { /* Increased specificity */
-  flex-grow: 1; 
-  margin-right: 10px; /* Space between section and header */
-  margin-left: 0;
-}
-
-body[dir="rtl"] footer { /* Increased specificity */
-  clear: none; /* Reset clear from float attempts */
-  width: 100%; 
-  order: 3; 
-}
-
-/* You might need further adjustments for specific elements */
