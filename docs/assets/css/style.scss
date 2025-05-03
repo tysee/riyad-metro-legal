@@ -41,8 +41,8 @@ section img:not(.app-screenshot) {
 
 /* Styles for Arabic RTL content */
 div.rtl {
-  direction: rtl;
-  text-align: right;
+  direction: rtl !important;
+  text-align: right !important;
   font-family: 'Arial', sans-serif;
 }
 
@@ -55,20 +55,20 @@ div.rtl h6,
 div.rtl p,
 div.rtl ul,
 div.rtl ol {
-  direction: rtl;
-  text-align: right;
+  direction: rtl !important;
+  text-align: right !important;
 }
 
 div.rtl ul, 
 div.rtl ol {
-  padding-right: 20px;
-  padding-left: 0;
+  padding-right: 20px !important;
+  padding-left: 0 !important;
 }
 
 /* Styles for English LTR content */
 div.ltr {
-  direction: ltr;
-  text-align: left;
+  direction: ltr !important;
+  text-align: left !important;
   font-family: 'Arial', sans-serif;
 }
 
@@ -81,51 +81,56 @@ div.ltr h6,
 div.ltr p,
 div.ltr ul,
 div.ltr ol {
-  direction: ltr;
-  text-align: left;
+  direction: ltr !important;
+  text-align: left !important;
 }
 
 div.ltr ul, 
 div.ltr ol {
-  padding-left: 20px;
-  padding-right: 0;
+  padding-left: 20px !important;
+  padding-right: 0 !important;
 }
 
 /* --- RTL Adjustments for position:fixed header --- */
 
+body[dir="rtl"] {
+  direction: rtl !important;
+}
+
 body[dir="rtl"] .wrapper header {
-  float: right;
+  float: right !important;
   left: auto !important;
   right: 0 !important;
-  position: fixed;
+  position: fixed !important;
+  width: 270px !important;
 }
 
 body[dir="rtl"] .wrapper section {
-  float: left;
+  float: left !important;
   margin-left: 0 !important;
   margin-right: 300px !important;
-  width: 500px;
+  width: 500px !important;
 }
 
 body[dir="rtl"] .wrapper footer {
-  float: left;
+  float: left !important;
   margin-left: 0 !important;
   margin-right: 300px !important;
-  width: 500px;
+  width: 500px !important;
 }
 
 /* --- RTL responsive adjustments --- */
 @media print, screen and (max-width: 960px) {
   body[dir="rtl"] .wrapper header {
-    float: none;
-    position: static;
-    width: auto;
+    float: none !important;
+    position: static !important;
+    width: auto !important;
   }
   
   body[dir="rtl"] .wrapper section, 
   body[dir="rtl"] .wrapper footer {
-    float: none;
+    float: none !important;
     margin-right: 0 !important;
-    width: auto;
+    width: auto !important;
   }
 }
