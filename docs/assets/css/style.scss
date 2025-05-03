@@ -6,11 +6,12 @@
   height: auto;
 }
 
+/* Styles for app screenshot images */
 .app-screenshot {
-  display: block; /* Needed for margin auto to work */
-  max-width: 100%; /* Ensure image scales down within container */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 300px; /* Limit maximum physical size */
+  display: block; 
+  max-width: 100%; 
+  height: auto; 
+  max-width: 300px; /* Max physical width */
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   margin-left: auto;
@@ -83,37 +84,41 @@ div.ltr ol {
   padding-right: 0;
 }
 
-/* Custom RTL adjustments using Flexbox */
-body[dir="rtl"] .wrapper {
-  display: flex;
-  flex-direction: row-reverse; /* Header on right, Section on left */
-  flex-wrap: wrap; /* Allow footer to wrap */
-}
+/* --- RTL Adjustments using Flexbox with higher specificity --- */
 
-body[dir="rtl"] header {
-  /* Reset float properties from previous attempt */
-  float: none; 
-  width: 260px; /* Set fixed width for the header */
-  flex-shrink: 0; /* Prevent header from shrinking */
-  margin-left: 10px; /* Space between header and page edge */
-  margin-right: 0; /* Reset default/LTR margin */
-}
-
+/* Reset potential theme floats/margins first */
+body[dir="rtl"] header,
 body[dir="rtl"] section {
-  /* Reset float properties from previous attempt */
-  float: none; 
-  flex-grow: 1; /* Allow section to take remaining space */
-  /* Reset width/margins from previous float attempt */
-  width: auto; 
+  float: none !important; /* Ensure float is overridden */
+  margin-left: initial !important; /* Reset theme's LTR margin */
+  margin-right: initial !important; 
+  width: auto !important; /* Reset theme's width */
+  position: static !important; /* Reset potential positioning */
+}
+
+body[dir="rtl"] div.wrapper { /* Increased specificity */
+  display: flex;
+  flex-direction: row-reverse; 
+  flex-wrap: wrap; 
+}
+
+body[dir="rtl"] header { /* Increased specificity */
+  width: 260px; 
+  flex-shrink: 0; 
+  margin-left: 10px; /* Space between header and page edge (now on the right) */
+  margin-right: 0;
+}
+
+body[dir="rtl"] section { /* Increased specificity */
+  flex-grow: 1; 
   margin-right: 10px; /* Space between section and header */
   margin-left: 0;
 }
 
-body[dir="rtl"] footer {
-  /* Reset clear properties from previous attempt */
-  clear: none; 
-  width: 100%; /* Ensure footer spans full width below flex items */
-  order: 3; /* Explicitly place footer after header and section */
+body[dir="rtl"] footer { /* Increased specificity */
+  clear: none; /* Reset clear from float attempts */
+  width: 100%; 
+  order: 3; 
 }
 
 /* You might need further adjustments for specific elements */
