@@ -13,9 +13,9 @@
     {% include head-custom.html %}
   </head>
   <body style="direction: rtl; margin: 0; padding: 0; font-family: Arial, sans-serif;">
-    <div style="display: flex; flex-direction: row-reverse; max-width: 100%; margin: 0 auto; padding: 20px;">
-      <div style="width: 270px; position: sticky; top: 20px; right: 0; padding-left: 20px;">
-        <h1 style="text-align: right;"><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+    <div style="display: flex; flex-direction: row-reverse; max-width: 1100px; margin: 0 auto; padding: 20px; gap: 10px;">
+      <div style="width: 300px; padding-left: 10px;">
+        <h1 style="text-align: right; margin-top: 0;"><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
         
         {% if site.logo %}
           <img src="{{site.logo | relative_url}}" alt="Logo" style="max-width: 100%; height: auto;"/>
@@ -40,7 +40,7 @@
         {% endif %}
       </div>
       
-      <div style="flex-grow: 1; padding: 0 20px;">
+      <div style="flex-grow: 1; padding: 0 10px;">
         <section style="text-align: right; direction: rtl;">
           {{ content }}
         </section>
