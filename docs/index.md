@@ -12,19 +12,23 @@ The Riyadh Metro app is your essential companion for navigating the Riyadh publi
 ### 🗺️ Metro Map Viewer
 
 View the complete Riyadh Metro network with all lines, stations, and interchanges in an interactive map.
+
 ![Metro Map](./images/metro-map.jpg){: .app-screenshot}
 
 ### 🔍 Station Search
 
 Easily find any station on the network by name or nearby location.
+
 ![Station Search](./images/station-search.jpg){: .app-screenshot}
 
 ### 🛣️ Route Planning & Navigation
 
 Plan your journey from any station to destination, with transfer information and estimated travel times.
+
 ![Route Planning](./images/route-planning.jpg){: .app-screenshot}
 
 ### ⏱️ Real-time Information
 
 Get up-to-date information about operating hours for all stations.
+
 ![Station Details](./images/station-details.jpg){: .app-screenshot}

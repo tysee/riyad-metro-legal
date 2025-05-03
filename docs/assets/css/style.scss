@@ -1,13 +1,33 @@
 @import "{{ site.theme }}";
 
+/* Стиль для логотипа */
+.wrapper header img {
+  max-width: 200px;
+  height: auto;
+}
+
 .app-screenshot {
-  max-width: 100px;
-  width: 100%;
+  max-width: 300px;
+  width: auto;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
+}
+
+/* Медиа-запросы для адаптивных изображений */
+@media (max-width: 768px) {
+  .app-screenshot {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-screenshot {
+    max-width: 200px;
+  }
 }
 
 /* Styles for Arabic RTL content */
