@@ -83,16 +83,27 @@ div.ltr ol {
 }
 
 /* Custom RTL adjustments */
-body[dir="rtl"] section {
-  /* Adjust the margin-right to prevent overlap with the header */
-  /* The exact value might need tweaking depending on the header width */
-  margin-right: 270px; /* Assuming header width + some padding */
-  margin-left: 10px; /* Reset default left margin if necessary */
+body[dir="rtl"] .wrapper {
+  /* Helps contain the floated header */
+  overflow: hidden; 
 }
 
-/* Ensure header stays on the right in RTL */
 body[dir="rtl"] header {
   float: right;
+  margin-left: 0; /* Reset LTR margin */
+  margin-right: 10px; /* Add some space to the right edge */
+}
+
+body[dir="rtl"] section {
+  float: right; /* Float section as well */
+  margin-left: 0; /* Reset LTR margin */
+  margin-right: 270px; /* Keep the right margin to avoid overlap */
+  width: calc(100% - 280px); /* Explicitly set width (adjust 280px if needed) */
+}
+
+/* Ensure footer clears the floated elements in RTL */
+body[dir="rtl"] footer {
+    clear: right; /* Changed from clear: both or potentially no clear */
 }
 
 /* You might need further adjustments for specific elements */
