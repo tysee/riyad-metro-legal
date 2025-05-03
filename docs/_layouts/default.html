@@ -11,6 +11,43 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     {% include head-custom.html %}
+    
+    {% if page.url contains '/ar/' %}
+    <style>
+      body {
+        direction: rtl !important;
+      }
+      .wrapper header {
+        float: right !important;
+        left: auto !important;
+        right: 0 !important;
+        width: 270px !important;
+      }
+      .wrapper section {
+        float: left !important;
+        margin-left: 20px !important;
+        margin-right: 320px !important;
+      }
+      .wrapper footer {
+        float: left !important;
+        margin-left: 20px !important;
+        margin-right: 320px !important;
+        clear: both !important;
+      }
+      @media print, screen and (max-width: 960px) {
+        .wrapper header {
+          float: none !important;
+          position: static !important;
+          width: auto !important;
+        }
+        .wrapper section, .wrapper footer {
+          float: none !important;
+          margin-right: 0 !important;
+          width: auto !important;
+        }
+      }
+    </style>
+    {% endif %}
   </head>
   <body {% if page.url contains '/ar/' %}dir="rtl"{% endif %}>
     <div class="wrapper">
