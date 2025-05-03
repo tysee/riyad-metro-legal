@@ -81,3 +81,18 @@ div.ltr ol {
   padding-left: 20px;
   padding-right: 0;
 }
+
+/* Custom RTL adjustments */
+body[dir="rtl"] section {
+  /* Adjust the margin-right to prevent overlap with the header */
+  /* The exact value might need tweaking depending on the header width */
+  margin-right: 270px; /* Assuming header width + some padding */
+  margin-left: 10px; /* Reset default left margin if necessary */
+}
+
+/* Ensure header stays on the right in RTL */
+body[dir="rtl"] header {
+  float: right;
+}
+
+/* You might need further adjustments for specific elements */
