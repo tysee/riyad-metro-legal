@@ -1,4 +1,9 @@
-<div class="ltr" dir="ltr" lang="en">
+---
+layout: default
+dir: ltr
+lang: en
+class: ltr
+---
 
 # Privacy Policy
 
@@ -117,5 +122,3 @@ We may update this Policy from time to time. We will notify you of significant c
 ## 11. Contact
 
 If you have any questions, comments, or requests regarding this Policy or the processing of your data, please contact us at: <maratsafutdinov@gmail.com>
-
-</div>

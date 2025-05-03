@@ -1,4 +1,9 @@
-<div class="rtl" dir="rtl" lang="ar">
+---
+layout: default
+dir: rtl
+lang: ar
+class: rtl
+---
 
 # سياسة الخصوصية
 
@@ -117,5 +122,3 @@
 ## 11. التواصل
 
 إذا كان لديك أي أسئلة أو تعليقات أو طلبات بخصوص هذه السياسة أو معالجة بياناتك، يرجى التواصل معنا عبر البريد الإلكتروني: <maratsafutdinov@gmail.com>
-
-</div>
