@@ -17,33 +17,99 @@
       body {
         direction: rtl !important;
       }
+      .wrapper {
+        width: 860px !important;
+        margin: 0 auto !important;
+      }
       .wrapper header {
         float: right !important;
         left: auto !important;
         right: 0 !important;
         width: 270px !important;
+        position: fixed !important;
       }
       .wrapper section {
         float: left !important;
-        margin-left: 20px !important;
-        margin-right: 320px !important;
+        width: 500px !important;
+        margin-left: 0 !important;
+        margin-right: 300px !important;
+        padding-bottom: 50px !important;
       }
       .wrapper footer {
         float: left !important;
-        margin-left: 20px !important;
-        margin-right: 320px !important;
-        clear: both !important;
+        width: 500px !important;
+        margin-left: 0 !important;
+        margin-right: 300px !important;
+        bottom: 50px !important;
       }
+      
+      /* RTL list styles */
+      header ul {
+        list-style: none !important;
+        padding-right: 0 !important;
+      }
+      
+      /* Adjustments for small screens */
       @media print, screen and (max-width: 960px) {
-        .wrapper header {
+        div.wrapper {
+          width: auto !important;
+          margin: 0 !important;
+        }
+        
+        .wrapper header, .wrapper section, .wrapper footer {
           float: none !important;
           position: static !important;
           width: auto !important;
         }
+        
+        .wrapper header {
+          padding-right: 320px !important;
+          text-align: right !important;
+        }
+        
         .wrapper section, .wrapper footer {
-          float: none !important;
-          margin-right: 0 !important;
-          width: auto !important;
+          border: 1px solid #e5e5e5 !important;
+          border-width: 1px 0 !important;
+          padding: 20px !important;
+          margin: 0 0 20px !important;
+        }
+        
+        header a small {
+          display: inline !important;
+        }
+        
+        header ul {
+          position: absolute !important;
+          right: 50px !important;
+          top: 52px !important;
+        }
+      }
+      
+      @media print, screen and (max-width: 720px) {
+        .wrapper header {
+          padding: 0 !important;
+        }
+        
+        .wrapper header ul, header p.view {
+          position: static !important;
+        }
+      }
+      
+      @media print, screen and (max-width: 480px) {
+        body {
+          padding: 15px !important;
+        }
+        
+        .wrapper header ul {
+          width: 99% !important;
+        }
+      }
+      
+      @media print {
+        body {
+          padding: 0.4in !important;
+          font-size: 12pt !important;
+          color: #444 !important;
         }
       }
     </style>
