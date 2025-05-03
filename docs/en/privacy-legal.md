@@ -1,4 +1,4 @@
-# Privacy Policy for Riyadh Metro App
+# Privacy Policy
 
 **Effective Date:** 2025-03-05
 
