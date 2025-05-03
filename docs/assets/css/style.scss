@@ -9,3 +9,55 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Styles for Arabic RTL content */
+.rtl {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Arial', sans-serif;
+}
+
+.rtl h1, 
+.rtl h2, 
+.rtl h3, 
+.rtl h4, 
+.rtl h5, 
+.rtl h6,
+.rtl p,
+.rtl ul,
+.rtl ol {
+  direction: rtl;
+  text-align: right;
+}
+
+.rtl ul, 
+.rtl ol {
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+/* Styles for English LTR content */
+.ltr {
+  direction: ltr;
+  text-align: left;
+  font-family: 'Arial', sans-serif;
+}
+
+.ltr h1, 
+.ltr h2, 
+.ltr h3, 
+.ltr h4, 
+.ltr h5, 
+.ltr h6,
+.ltr p,
+.ltr ul,
+.ltr ol {
+  direction: ltr;
+  text-align: left;
+}
+
+.ltr ul, 
+.ltr ol {
+  padding-left: 20px;
+  padding-right: 0;
+}
