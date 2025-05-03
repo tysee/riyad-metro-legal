@@ -1,9 +1,5 @@
 # Riyadh Metro Legal Information
 
-<div style="text-align: center; margin-bottom: 30px;">
-  <img src="./images/logo.png" alt="Riyadh Metro Logo" width="250">
-</div>
-
 Welcome to the official legal information page for the Riyadh Metro app.
 
 ## Legal Information
